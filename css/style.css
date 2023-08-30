@@ -1,0 +1,399 @@
+
+/*This is a comment in CSS*/
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+	background-color: #f0f0ef;
+    
+}
+
+div {
+	width:10%;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+div img{
+	width:100%;
+}
+  
+.home {
+	margin: 1.5vh auto auto auto;
+}
+
+.home1 {
+	margin: 0.6% auto auto  auto;
+	width:34%;
+	display: flex;
+}
+.movebox1 {
+	margin:3% auto auto auto;
+	width:10px;
+	height:10px;
+	background-color:#dfa5a5;
+	animation-name:move-color;
+	animation-duration: 6s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	position:relative;
+}
+
+@keyframes move-color {
+	0% {
+		top:0;
+		left:0;
+		background-color:rgb(245, 156, 156);
+	}
+	25% {
+		top:0;
+		left:700px;
+		border-radius: 50%;
+	}
+	50% {
+		top:300px;
+		left:300px;
+	}
+	75% {
+		top:300px;
+		left:0;
+		border-radius: 10%;
+	}
+	100%{
+		top:0;
+		left:0;
+		background-color: rgb(230, 241, 255);
+		
+	}
+}
+
+a{
+	text-decoration:none;
+	color:rgb(219, 228, 255);
+	
+}
+
+.center{
+	position: absolute;
+            top: 50%;
+            left: 50%;
+}
+
+p {
+	font-size: 3vw;
+	color:rgb(217, 221, 225);
+	margin: 20px auto;
+	letter-spacing: 3px;
+
+}
+
+h2 {
+	font-size:1.5vw;
+	font-weight:300;
+	color:rgb(138, 107, 131);
+
+	text-align: right;
+	margin: 10px auto;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 100;
+  text-align: left;
+  overflow: hidden;/* Ensures the content is not revealed until the animation */
+  border-right: .17em solid pink;/* The typewriter cursor */
+  white-space: nowrap;/* Keeps the content on a single line */
+  margin: 0 auto;/* Gives that scrolling effect as the typing happens */
+  letter-spacing: .12em;/* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+}
+
+h4{
+	margin-top: 3%;
+	margin-left: 5%;
+	font-size:2.7vw;
+	font-weight:600;
+	letter-spacing: 3px;
+
+	color:rgb(237, 157, 161);
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 100%
+    }
+  }
+  /* The typewriter cursor effect */
+  @keyframes blinking-cursor {
+    from,
+    to {
+      border-color: transparent
+    }
+    50% {
+      border-color:rgb(216, 151, 153);
+    }
+  }
+
+.aboutBackground{
+	background-color:rgb(255, 251, 240);
+}
+
+h2.about{
+	margin-top: 1%;
+	margin-right: 5%;
+	font-size: 1.5vw;
+	letter-spacing: 2px;
+
+	color:rgb(138, 107, 131);
+}
+
+h3.journey{
+	margin-top: 5%;
+	margin-left: 10%;
+	font-size: 1.8vw;
+	font-weight: 350;
+	letter-spacing: 3px;
+	text-align: left;
+
+	color:rgb(165, 184, 192);
+}
+
+h5{
+	position:fixed;
+	font-size:1.5vw;
+	font-weight:100;
+	letter-spacing: 3px;
+
+	color:rgb(138, 107, 131);
+}
+
+.butterfly{
+	margin: -450px 0 0 0;
+	float:right;
+	width:50%;
+	display: flex;
+
+}
+
+.back{
+	position:fixed;
+	padding:1px 95%;
+
+	font-size: 40px;
+}
+
+.centered-wrapper{
+    width:1500px;
+	
+    margin: 80 auto;
+	margin-left: 50px;
+    text-align: left;
+    padding-top: 30px;
+    color: rgb(249, 206, 223);
+}
+
+.button{
+	background-color: rgb(230, 173, 185);
+  text-align: left;;
+  font-size: 50%;
+  font-weight: regular;
+  font-family:'Courier New', Courier, monospace;
+  color: rgb(244, 246, 228);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-top:20px;
+  margin-left: 15%;
+  margin-bottom: 20px;
+  border-style:double;
+  border-color: aliceblue;
+  border-radius: 100px;
+}
+
+
+/* Media Queries for responsive design */
+
+/* Un-comment the body background-colors to see bold debug color change between screen sizes */
+
+@media screen and (max-width: 1500px) {
+	/* body {
+	  background-color: rgb(0, 255, 162);
+	} */
+  
+	.body{
+		flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
+	}
+
+	nav{
+		position: fixed;
+		padding:20px 2%;
+	}
+	
+	h3 {
+		font-size: 30px;
+		font-weight: 100;
+		
+		text-align: left;
+		overflow: hidden;/* Ensures the content is not revealed until the animation */
+		border-right: .17em solid pink;/* The typewriter cursor */
+		white-space: nowrap;/* Keeps the content on a single line */
+
+		margin: 2% auto;/* Gives that scrolling effect as the typing happens */
+		margin-left: 3%;
+		margin-right: 3%;
+		letter-spacing: .12em;/* Adjust as needed */
+		animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+	  }
+	  
+	h4{
+		margin-top: 3%;
+		margin-left: 2%;
+		margin-right: 2%;
+		font-size:2.7vw;
+	    font-weight:600;
+		letter-spacing: 2px;
+	  
+		color:rgb(237, 157, 161);
+	}
+  
+	h3.about{
+		margin-top: 5%;
+		margin-left: 15%;
+		font-size: 1.5vw;
+		font-weight: 350;
+		letter-spacing: 2px;
+	
+		color:rgb(138, 107, 131);
+	}
+  }
+  
+/* Extra large */
+@media screen and (max-width: 1200px) {
+	/* body {
+	  background-color: rgb(0, 255, 162);
+	} */
+  
+	.body{
+		flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
+	}
+	
+	h3 {
+		font-size: 30px;
+		font-weight: 100;
+		
+		text-align: left;
+		overflow: hidden;/* Ensures the content is not revealed until the animation */
+		border-right: .17em solid pink;/* The typewriter cursor */
+		white-space: nowrap;/* Keeps the content on a single line */
+
+		margin: 2% auto;/* Gives that scrolling effect as the typing happens */
+		margin-left: 3%;
+		margin-right: 3%;
+		letter-spacing: .12em;/* Adjust as needed */
+		animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+	  }
+	  
+	h4{
+		margin-top: 3%;
+		margin-left: 2%;
+		margin-right: 2%;
+		font-size:2.7vw;
+	    font-weight:600;
+		letter-spacing: 2px;
+	  
+		color:rgb(237, 157, 161);
+	}
+  
+	h3.about{
+		margin-top: 5%;
+		margin-left: 15%;
+		font-size: 1.5vw;
+		font-weight: 350;
+		letter-spacing: 2px;
+	
+		color:rgb(138, 107, 131);
+	}
+  }
+  
+  /* Large */
+  @media screen and (max-width: 992px) {
+	/* body {
+	  background-color: rgb(255, 81, 0);
+	} */
+  
+	.body{
+	  flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
+	}
+
+	h3 {
+		font-size: 30px;
+		font-weight: 100;
+		
+		text-align: left;
+		overflow: hidden;/* Ensures the content is not revealed until the animation */
+		border-right: .17em solid pink;/* The typewriter cursor */
+		white-space: nowrap;/* Keeps the content on a single line */
+
+		margin: 2% auto;/* Gives that scrolling effect as the typing happens */
+		margin-left: 3%;
+		margin-right: 3%;
+		letter-spacing: .12em;/* Adjust as needed */
+		animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
+	  }
+	  
+	h4{
+		margin-top: 3%;
+		margin-left: 2%;
+		font-size:2.5vw;
+	    font-weight:600;
+		letter-spacing: 3px;
+	  
+		color:rgb(237, 157, 161);
+	}
+  
+	h3.about{
+		margin-top: 5%;
+		margin-left: 15%;
+		font-size: 1.8vw;
+		font-weight: 350;
+		letter-spacing: 2px;
+	
+		color:rgb(138, 107, 131);
+	}
+
+  
+  /* Medium */
+  @media screen and (max-width: 768px) {
+	/* body {
+	  background-color: rgb(255, 0, 191);
+	} */
+  
+	.body{
+	  flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
+	}
+  
+
+  }
+  
+  /* Small */
+  @media screen and (max-width: 576px) {
+	/* body {
+	  background-color: blue;
+	} */
+  
+	.body{
+	  flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
+	}
+}
+}
